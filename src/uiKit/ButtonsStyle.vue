@@ -8,19 +8,18 @@
     :data-cy="dataCy"
   >
     <slot name="leadingSlot"></slot>
-    <Loader v-if="loading" />
+    <InsideButtonLoader v-if="loading" />
     {{ buttonLabel }}
     <slot> </slot>
   </button>
 </template>
 
 <script lang="ts" setup>
-import { PropType, computed } from "vue";
-import Loader from "./InsideButtonLoader.vue";
+import { computed } from "vue";
+import InsideButtonLoader from "./InsideButtonLoader.vue";
 
 const props = defineProps({
   variant: {
-    type: String as PropType<"primary" | "secondary" | "with_border" | "next">,
     default: "primary"
   },
   disabled: {
@@ -75,16 +74,16 @@ const classes = computed(() => {
 }
 
 .primary {
-  background-color: #dd5928;
+  background-color: #192199;
   color: #fff;
 }
 
 .primary:hover {
-  background: #b5461d;
+  background: #070d59;
 }
 
 .secondary {
-  color: #dd5928;
+  color: #192199;
 }
 
 .with_border {
@@ -92,8 +91,8 @@ const classes = computed(() => {
   color: #696f8c;
 }
 .next {
-  border: 1px solid #b5461d;
-  color: #dd5928;
+  border: 1px solid #070d59;
+  color: #192199;
 }
 
 .disabled {
