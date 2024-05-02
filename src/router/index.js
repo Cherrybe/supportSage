@@ -8,6 +8,12 @@ const router = createRouter({
       path: '/',
       name: 'home',
       component: SageHome
+    },
+    {
+      path: '/document-preview',
+      name: 'documentPreview',
+      meta: { auth: true },
+      component: () => import('../views/DocumentPage.vue')
     }
   ]
 })
