@@ -15,7 +15,7 @@
       </div>
 
       <slot v-if="mail?.isOpen">
-        <p class="text-base N600">{{ mail.body }}</p>
+        <p class="text-base N600 border-t pt-2">{{ mail.body }}</p>
       </slot>
     </div>
     <button @click="handlePreview(mail)">
