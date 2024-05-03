@@ -1,6 +1,6 @@
 <template>
   <div v-if="isLoading">
-    <LoadingGif label="Loding email..." />
+    <LoadingGif label="Loading email..." />
   </div>
   <div class="mt-2 px-6 py-10 rounded-lg BG0">
     <div class="flex justify-between items-center">

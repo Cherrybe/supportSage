@@ -15,12 +15,12 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from "vue";
-import InsideButtonLoader from "./InsideButtonLoader.vue";
+import { computed } from 'vue'
+import InsideButtonLoader from './InsideButtonLoader.vue'
 
 const props = defineProps({
   variant: {
-    default: "primary"
+    default: 'primary'
   },
   disabled: {
     type: Boolean,
@@ -28,7 +28,7 @@ const props = defineProps({
   },
   buttonLabel: {
     type: String,
-    default: ""
+    default: ''
   },
   loading: {
     type: Boolean,
@@ -36,30 +36,27 @@ const props = defineProps({
   },
   dataCy: {
     type: String,
-    default: ""
+    default: ''
   },
   class: {
     type: String,
-    default: ""
+    default: ''
   },
   buttonStyle: {
-    type: Object,
-    default: {}
+    type: Object
   }
-});
+})
 
-const emit = defineEmits(["submit"]);
+const emit = defineEmits(['submit'])
 
-const handleClick = (): void => {
+const handleClick = () => {
   if (!props.disabled) {
-    emit("submit");
+    emit('submit')
   }
-};
+}
 const classes = computed(() => {
-  return `button ${props.variant} ${props.disabled ? "disabled" : ""} ${
-    props.class
-  }`;
-});
+  return `button ${props.variant} ${props.disabled ? 'disabled' : ''} ${props.class}`
+})
 </script>
 
 <style scoped>
@@ -87,8 +84,8 @@ const classes = computed(() => {
 }
 
 .with_border {
-  border: 1px solid #f3efef;
-  color: #696f8c;
+  border: 1px solid #c3c3c3;
+  color: #fff;
 }
 .next {
   border: 1px solid #070d59;
